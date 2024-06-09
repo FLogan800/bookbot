@@ -2,6 +2,7 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     
+    print(f"========Book report on {book_path}========")
     num_words = get_num_words(text)
     print(f"There are {num_words} found in the document\n")
 
@@ -13,6 +14,8 @@ def main():
             continue
         
         print(f"The '{item["name"]}' character was found {item["num"]} times")
+    
+    print("========End of Report========")
 
 # returns the text in the book as a string
 def get_book_text(book_path):
